@@ -125,7 +125,7 @@ public class ServiceOrderListActivity extends AppCompatActivity implements Popup
                                     // Delete and show a message
                                     serviceOrder.setActive(true);
                                     serviceOrder.save();
-                                    Toast.makeText(ServiceOrderListActivity.this, R.string.msg_activate, Toast.LENGTH_LONG).show();
+                                    Toast.makeText(ServiceOrderListActivity.this, R.string.msg_activate_sucess, Toast.LENGTH_LONG).show();
                                     // Update recycler view dataset
                                     updateRecyclerItens();
                                     // Force onPrepareOptionsMenu call
@@ -175,17 +175,21 @@ public class ServiceOrderListActivity extends AppCompatActivity implements Popup
                 return true;
             case R.id.actionFilter:
                 isFilterActive = !isFilterActive;
-                if(!isFilterActive) {
-                    item.setIcon(getResources().getDrawable(R.mipmap.ic_filter_list_selected));
-                    item.setTitle(getString(R.string.lbl_menu_filter));
-                }else {
-                    item.setIcon(getResources().getDrawable(R.mipmap.ic_filter_list));
-                    item.setTitle(getString(R.string.lbl_menu_remove_filter));
-                }
+                alterarIconeFiltro(item);
                 updateRecyclerItens();
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void alterarIconeFiltro(MenuItem item) {
+        if(!isFilterActive) {
+            item.setIcon(getResources().getDrawable(R.mipmap.ic_filter_list_selected));
+            item.setTitle(getString(R.string.lbl_menu_filter));
+        }else {
+            item.setIcon(getResources().getDrawable(R.mipmap.ic_filter_list));
+            item.setTitle(getString(R.string.lbl_menu_remove_filter));
+        }
     }
 
     @Override
