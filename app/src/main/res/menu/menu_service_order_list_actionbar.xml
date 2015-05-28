@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".controllers.ServiceOrderActivity">
+
+    <item
+        android:id="@+id/actionShare"
+        android:title="@string/lbl_share"
+        android:icon="@mipmap/ic_action_share"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/actionFilter"
+        android:title="@string/lbl_menu_filter"
+        android:icon="@mipmap/ic_filter_list"
+        app:showAsAction="always" />
+</menu>
