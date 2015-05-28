@@ -175,7 +175,13 @@ public class ServiceOrderListActivity extends AppCompatActivity implements Popup
                 return true;
             case R.id.actionFilter:
                 isFilterActive = !isFilterActive;
-               // item.setIcon(R.drawable.ic_se)
+                if(!isFilterActive) {
+                    item.setIcon(getResources().getDrawable(R.mipmap.ic_filter_list_selected));
+                    item.setTitle(getString(R.string.lbl_menu_filter));
+                }else {
+                    item.setIcon(getResources().getDrawable(R.mipmap.ic_filter_list));
+                    item.setTitle(getString(R.string.lbl_menu_remove_filter));
+                }
                 updateRecyclerItens();
                 return true;
         }

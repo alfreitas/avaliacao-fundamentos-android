@@ -43,5 +43,6 @@
     <string name="msg_invalid_user">Usuário ou senha inválido.</string>
     <string name="lbl_menu_filter">Filtrar</string>
     <string name="lbl_ative">Desarquivar</string>
+    <string name="lbl_menu_remove_filter">Remover Filtro</string>
 
 </resources>

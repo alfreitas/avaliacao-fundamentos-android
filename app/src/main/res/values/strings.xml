@@ -42,5 +42,6 @@
     <string name="msg_invalid_user">Invalid user or password</string>
     <string name="lbl_menu_filter">Filter</string>
     <string name="lbl_ative">unArchiving</string>
+    <string name="lbl_menu_remove_filter">Remove Filter</string>
 
 </resources>
